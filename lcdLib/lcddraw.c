@@ -37,6 +37,26 @@ void fillRectangle(u_char colMin, u_char rowMin, u_char width, u_char height,
   }
 }
 
+void fillTeehee(){
+  clearScreen(COLOR_BLACK);
+  int i = 0;
+  while(i < screenHeight){
+    for(int j = 0; j < screenWidth;){
+      drawString8x12(j,i,"Teehee",COLOR_RED,COLOR_BLACK);
+      j += 52;
+    }
+    i += 12;
+  }
+}
+
+void fillTriangle(u_char colMin, u_char rowMin, u_char height, u_int colorBGR){
+  for(int row = 1; row < height +1; row++){
+    for(int col = 1; col < (row + (row-1)); col++){
+      drawPixel((col+colMin)+(height-row), row+rowMin, colorBGR);
+    }
+  }
+}
+
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen

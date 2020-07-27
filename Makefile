@@ -22,3 +22,6 @@ clean:
 	(cd src; make clean)
 	rm -rf lib h
 	rm -rf doxygen_docs/*
+
+load:
+	(cd src; make load)

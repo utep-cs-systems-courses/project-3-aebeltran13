@@ -16,19 +16,22 @@ void state_advance(int state){
     state = 0;
     break;
   case 2:
-    clearScreen(COLOR_ROYAL_BLUE);
+    clearScreen(COLOR_SKY_BLUE);
+    drawString8x12(10,60,"Its pretty", COLOR_GREEN, COLOR_BLUE);
+    drawString8x12(30,72,"huh", COLOR_GREEN, COLOR_BLUE);
+    fillTriangle(10,10,10,COLOR_YELLOW);
+    fillTriangle(30,110,45,COLOR_YELLOW);
+    fillTriangle(70,25,25,COLOR_ORANGE);
     song();
-    drawString8x12(10,10,"This is a screen", COLOR_GREEN, COLOR_BLUE);
-    drawString8x12(10,22,"where words should", COLOR_GREEN, COLOR_BLUE);
-    drawString8x12(10,34,"appear. Hello!", COLOR_GREEN, COLOR_BLUE);
-    drawString8x12(10,46,"And Goodbye!", COLOR_GREEN, COLOR_BLUE);
     state = 0;
     break;
   case 3:
+    fillTeehee();
     siren_song();
     state = 0;
     break;
   case 4:
+    clearScreen(COLOR_FOREST_GREEN);
     led_siren();
     state = 0;
     break;
