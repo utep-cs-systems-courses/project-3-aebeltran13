@@ -11,8 +11,9 @@
 void state_advance(int state){
   switch(state){
   case 1:
-    led_dim();
     clearScreen(COLOR_BLUE);
+    fillCircle(50,50,15,COLOR_PINK);
+    led_dim();
     state = 0;
     break;
   case 2:
@@ -32,6 +33,7 @@ void state_advance(int state){
     break;
   case 4:
     clearScreen(COLOR_FOREST_GREEN);
+    drawFace();
     led_siren();
     state = 0;
     break;

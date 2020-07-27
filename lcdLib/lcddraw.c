@@ -49,6 +49,7 @@ void fillTeehee(){
   }
 }
 
+// Draws a triangle
 void fillTriangle(u_char colMin, u_char rowMin, u_char height, u_int colorBGR){
   for(int row = 1; row < height +1; row++){
     for(int col = 1; col < (row + (row-1)); col++){
@@ -57,6 +58,42 @@ void fillTriangle(u_char colMin, u_char rowMin, u_char height, u_int colorBGR){
   }
 }
 
+//draws a circle
+void fillCircle(u_char colCen, u_char rowCen, u_char radius, u_int colorBGR){
+    int x = radius;
+    int y = 0;
+    int xChange = 1 - (radius << 1);
+    int yChange = 0;
+    int radiusError = 0;
+    
+    while (x >= y){
+      for (int i = colCen - x; i <= colCen + x; i++){
+	drawPixel(i, rowCen + y, colorBGR);
+	drawPixel(i, rowCen - y, colorBGR);
+      }
+      for (int i = colCen - y; i <= colCen + y; i++){
+	drawPixel(i, rowCen + x, colorBGR);
+	drawPixel(i, rowCen - x, colorBGR);
+      }
+      y++;
+      radiusError += yChange;
+      yChange += 2;
+      if (((radiusError << 1) + xChange) > 0){
+	x--;
+	radiusError += xChange;
+	xChange += 2;
+      }
+    }
+  }
+
+void drawFace(){
+  fillCircle(screenWidth/2, screenHeight/2 +35, 70, COLOR_YELLOW);
+  fillCircle(30, screenHeight/2+15, 27, COLOR_BLACK);
+  fillCircle(90, screenHeight/2+15, 27, COLOR_BLACK);
+  fillCircle(20, screenHeight/2,10,COLOR_WHITE);
+  fillCircle(80, screenHeight/2,10,COLOR_WHITE);
+  fillRectangle(20,135,90,3,COLOR_BLACK);
+}
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen

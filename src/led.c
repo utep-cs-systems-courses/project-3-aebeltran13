@@ -59,4 +59,5 @@ void led_siren(){
     P1OUT = LED_RED;
     __delay_cycles(2500000);
   }
+  P1OUT = !LED_RED;
 }

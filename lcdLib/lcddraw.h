@@ -29,6 +29,12 @@ void fillTeehee();
 // Makes triangle
 void fillTriangle(u_char colMin, u_char rowMin, u_char height, u_int colorBGR);
 
+//Makes circle
+void fillCircle(u_char colCen, u_char rowCen, u_char radius, u_int colorBGR);
+
+//Draws a little emoji face
+void drawFace();
+
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen
