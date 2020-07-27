@@ -10,14 +10,13 @@ void main(void)
 {  
   configureClocks();
   lcd_init();
-  u_char width = screenWidth, height = screenHeight;
-  clearScreen(COLOR_BLUE);
-
-  drawString8x12(10,10,"WORD", COLOR_WHITE, COLOR_RED);
-  
   switch_init();
   led_init();
   buzzer_init();
 
+  clearScreen(COLOR_ROYAL_BLUE);
+  drawString8x12(37,10,"Teehee", COLOR_WHITE, COLOR_BLACK);
+  drawString8x12(17,25,"Press Sumn", COLOR_WHITE, COLOR_BLACK);
+  
   or_sr(0x18);  // CPU off, GIE on
 } 
