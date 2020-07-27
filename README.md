@@ -1,4 +1,11 @@
-# Project 3: Graphical LCD Toy 
+# Project 3: Graphical LCD Toy
+
+## Running the program
+Simply type "make load" in project-3-aebeltran13/ directory and start
+preassing buttons.
+
+For more information look at the README file in src/
+
 ## Introduction
 
 Continuing your effort to help ACME Solutions provide Christmas toys, 
