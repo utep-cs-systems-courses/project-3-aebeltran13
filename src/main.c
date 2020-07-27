@@ -13,7 +13,7 @@ void main(void)
   u_char width = screenWidth, height = screenHeight;
   clearScreen(COLOR_BLUE);
 
-  drawString5x7(10,10,"WORD", COLOR_WHITE, COLOR_RED);
+  drawString8x12(10,10,"WORD", COLOR_WHITE, COLOR_RED);
   
   switch_init();
   led_init();

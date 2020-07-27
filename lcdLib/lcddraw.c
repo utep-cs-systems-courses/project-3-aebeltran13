@@ -55,7 +55,7 @@ void drawChar8x12(u_char rcol, u_char rrow, char c,
      u_int fgColorBGR, u_int bgColorBGR) 
 {
   u_char col = 0;
-  u_char row = 0;
+  u_int row = 0;
   u_char bit = 0x80;
   u_char oc = c - 0x20;
 
