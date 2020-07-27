@@ -10,8 +10,12 @@ void main(void)
 {  
   configureClocks();
   lcd_init();
-  switch_init();
+  u_char width = screenWidth, height = screenHeight;
+  clearScreen(COLOR_BLUE);
+
+  drawString5x7(10,10,"WORD", COLOR_WHITE, COLOR_RED);
   
+  switch_init();
   led_init();
   buzzer_init();
 
