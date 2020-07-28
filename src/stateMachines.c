@@ -12,7 +12,7 @@ void state_advance(int state){
   switch(state){
   case 1:
     clearScreen(COLOR_BLUE);
-    drawMOON();
+    drawMoon();
     led_dim();
     state = 0;
     break;
