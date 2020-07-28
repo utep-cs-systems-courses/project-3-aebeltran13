@@ -22,28 +22,28 @@ void led_update(){
 }
 
 void toggle_on(){
-  P1OUT = LED_RED;
+  P1OUT |= LED_RED;
   __delay_cycles(500000);
-  P1OUT = LED_GREEN;
+  P1OUT |= LED_GREEN;
   __delay_cycles(500000);
 }
 
 void toggle_off(){
-  P1OUT = !(LED_GREEN);
+  P1OUT &= !(LED_GREEN);
   __delay_cycles(500000);
-  P1OUT = !LED_RED;
+  P1OUT &= !LED_RED;
   __delay_cycles(500000);
 }
 
 void led_dim(){
   for(int i = 0; i<1000; i++){
-    P1OUT = LED_RED;
+    P1OUT |= LED_RED;
     __delay_cycles(10000);
-    P1OUT = LED_GREEN;
+    P1OUT |= LED_GREEN;
     __delay_cycles(10000);
-    P1OUT = !LED_RED;
+    P1OUT &= !LED_RED;
     __delay_cycles(10000);
-    P1OUT = !LED_GREEN;
+    P1OUT &= !LED_GREEN;
     __delay_cycles(10000);
   }
 }

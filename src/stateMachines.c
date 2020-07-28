@@ -12,17 +12,13 @@ void state_advance(int state){
   switch(state){
   case 1:
     clearScreen(COLOR_BLUE);
-    fillCircle(50,50,15,COLOR_PINK);
+    drawMOON();
     led_dim();
     state = 0;
     break;
   case 2:
     clearScreen(COLOR_SKY_BLUE);
-    drawString8x12(10,60,"Its pretty", COLOR_GREEN, COLOR_BLUE);
-    drawString8x12(30,72,"huh", COLOR_GREEN, COLOR_BLUE);
-    fillTriangle(10,10,10,COLOR_YELLOW);
-    fillTriangle(30,110,45,COLOR_YELLOW);
-    fillTriangle(70,25,25,COLOR_ORANGE);
+    songBGR();
     song();
     state = 0;
     break;

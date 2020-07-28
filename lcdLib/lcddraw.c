@@ -94,6 +94,18 @@ void drawFace(){
   fillCircle(80, screenHeight/2,10,COLOR_WHITE);
   fillRectangle(20,135,90,3,COLOR_BLACK);
 }
+
+void drawMoon(){
+  fillCircle(50,50,15,COLOR_PINK);
+}
+
+void songBGR(){
+  drawString8x12(10,60,"Its pretty", COLOR_GREEN, COLOR_BLUE);
+  drawString8x12(30,72,"huh", COLOR_GREEN, COLOR_BLUE);
+  fillTriangle(10,10,10,COLOR_YELLOW);
+  fillTriangle(30,110,45,COLOR_YELLOW);
+  fillTriangle(70,25,25,COLOR_ORANGE);
+}
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen

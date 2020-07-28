@@ -35,6 +35,11 @@ void fillCircle(u_char colCen, u_char rowCen, u_char radius, u_int colorBGR);
 //Draws a little emoji face
 void drawFace();
 
+//Draws pink moon
+void drawMoon();
+
+//Draws song background with three triangles and text
+void songBGR();
 /** Clear screen (fill with color)
  *  
  *  \param colorBGR The color to fill screen
